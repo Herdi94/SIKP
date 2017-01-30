@@ -81,7 +81,7 @@ $this->email->initialize($config);
                 'tgl_akhir' => $this->input->post('tgl_akhir'),
                 'photo' => $picture
             );
-     $this->load->library('email');
+     $this->load->library('email'); /*
    $this->email->initialize(array(
   'protocol' => 'smtp',
   'smtp_host' => 'smtp.sendgrid.net',
@@ -91,7 +91,7 @@ $this->email->initialize($config);
   'crlf' => "\r\n",
   'newline' => "\r\n"
            ));
-        
+       */ 
         //sending email
          $email = $this->input->post('email');
         $this->email->from($email);
