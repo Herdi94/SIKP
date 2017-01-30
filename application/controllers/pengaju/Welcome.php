@@ -28,13 +28,13 @@ class Welcome extends CI_Controller
     {
         $this->load->library('email');
 
-
+/*
         $config['protocol'] = 'sendmail';
         $config['mailpath'] = '/usr/sbin/sendmail';
         $config['charset'] = 'iso-8859-1';
         $config['wordwrap'] = TRUE;
         $this->email->initialize($config);
-
+*/
     }
 
 
@@ -59,7 +59,7 @@ class Welcome extends CI_Controller
                 } else {
                    $error = array('error' => $this->upload->display_errors());
                     $this->session->set_flashdata('error',$error['error']);
-                    redirect('pengaju/welcome/#about');
+                   // redirect('pengaju/welcome/#about');
                 }
             } else {
                 $picture = '';
