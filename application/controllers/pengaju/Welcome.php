@@ -26,7 +26,7 @@ class Welcome extends CI_Controller
 
        function __construct()
     {
-        $this->load->library('email');
+//        $this->load->library('email');
 
 /*
         $config['protocol'] = 'sendmail';
@@ -82,15 +82,12 @@ class Welcome extends CI_Controller
             );
 
         //sending email
-
-        $email = $this->input->post('email');
         $this->load->library('email');
-        $this->email->from($email);
+        $config['mailtype'] = 'html';
+        $this->email->initialize($config);
         $this->email->to('dfikr94@gmail.com');
-
-
-
-
+        $email = $this->input->post('email');
+        $this->email->from($email);
         $this->email->subject('Email Test');
         $this->email->message('Halo Herdi kamu berhasil mengirim email');
         $this->email->send();
