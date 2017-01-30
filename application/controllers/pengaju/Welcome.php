@@ -26,8 +26,7 @@ class Welcome extends CI_Controller
 /*
        function __construct()
     {
-   
-/*
+   /*
         $config['protocol'] = 'sendmail';
         $config['mailpath'] = '/usr/sbin/sendmail';
         $config['charset'] = 'iso-8859-1';
@@ -44,7 +43,7 @@ $this->email->initialize($config);
                 $config['upload_path'] = 'upload/';
                 $config['allowed_types'] = 'jpg|jpeg|png|gif';
 
-                $config['max_size']             = '4096';
+                $config['max_size'] = '4096';
                 $config['file_name'] = $_FILES['photo']['name'];
 
                 //load form validation
@@ -87,7 +86,7 @@ $this->email->initialize($config);
   'smtp_host' => 'smtp.sendgrid.net',
   'smtp_user' => 'azure_de6af651bb8f9f7691d4167405a9a4eb@azure.com',
   'smtp_pass' => 'Axis0945',
-  'smtp_port' => 587
+  'smtp_port' => 25
            ));
         
         
