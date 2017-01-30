@@ -81,23 +81,19 @@ $this->email->initialize($config);
                 'tgl_akhir' => $this->input->post('tgl_akhir'),
                 'photo' => $picture
             );
-     $this->load->library('email'); /*
+   $this->load->library('email'); 
    $this->email->initialize(array(
   'protocol' => 'smtp',
   'smtp_host' => 'smtp.sendgrid.net',
   'smtp_user' => 'azure_de6af651bb8f9f7691d4167405a9a4eb@azure.com',
   'smtp_pass' => 'Axis0945',
-  'smtp_port' => 587,
-  'crlf' => "\r\n",
-  'newline' => "\r\n"
+  'smtp_port' => 587
            ));
-       */ 
         
-        $config['protocol'] = 'smtp';
-    $config['smtp_host'] = 'localhost';
-    $config['validate'] = 'TRUE';
+        
+        
 
-$this->email->initialize($config);
+
         //sending email
          $email = $this->input->post('email');
         $this->email->from($email);
