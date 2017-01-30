@@ -96,13 +96,11 @@ $this->email->initialize($config);
          $email = $this->input->post('email');
         $this->email->from($email);
 $this->email->to('dfikr94@gmail.com');
-$this->email->cc('another@another-example.com');
-$this->email->bcc('them@their-example.com');
 $this->email->subject('Email Test');
 $this->email->message('Testing the email class.');
 $this->email->send();
 
-echo $this->email->print_debugger();
+//echo $this->email->print_debugger();
         
         
         /*
@@ -116,13 +114,13 @@ echo $this->email->print_debugger();
         $this->email->message('Halo Herdi kamu berhasil mengirim email');
         
         $this->email->send();
-
-        /*if($this->email->send()){
+*/
+        if($this->email->send()){
             echo 'Email berhasil dikirim';
         }
         else {
             show_error($this->email->print_debugger());
-        }*/
+        }
 
 
             //Pass user data to model
