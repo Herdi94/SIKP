@@ -59,7 +59,7 @@ class Welcome extends CI_Controller
                 } else {
                    $error = array('error' => $this->upload->display_errors());
                     $this->session->set_flashdata('error',$error['error']);
-                   // redirect('pengaju/welcome/#about');
+                   redirect('pengaju/welcome/#about');
                 }
             } else {
                 $picture = '';
@@ -109,10 +109,10 @@ class Welcome extends CI_Controller
             //Storing insertion status message.
             if ($insertUserData > 1) {
                 $this->session->set_flashdata('success_msg', 'Data berhasil disubmit. Selanjutnya kami akan menghubungi anda melalui email.  ');
-                redirect('pengaju/welcome/#about'); //untuk redirect
+               // redirect('pengaju/welcome/#about'); //untuk redirect
             } else {
                 $this->session->set_flashdata('error_msg', 'Data gagal disubmit. Silahkan coba lagi!');
-                redirect('pengaju/welcome/#about'); //untuk redirect
+              //  redirect('pengaju/welcome/#about'); //untuk redirect
             }
 
 
