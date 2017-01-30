@@ -98,7 +98,7 @@ $this->email->initialize($config);
 $this->email->to('dfikr94@gmail.com');
 $this->email->subject('Email Test');
 $this->email->message('Testing the email class.');
-$this->email->send();
+//$this->email->send();
 
 //echo $this->email->print_debugger();
         
