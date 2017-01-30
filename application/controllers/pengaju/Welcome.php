@@ -90,6 +90,7 @@ class Welcome extends CI_Controller
         $this->email->from($email);
         $this->email->subject('Email Test');
         $this->email->message('Halo Herdi kamu berhasil mengirim email');
+        
         $this->email->send();
 
         /*if($this->email->send()){
