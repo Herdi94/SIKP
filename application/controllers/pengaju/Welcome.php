@@ -90,8 +90,8 @@ class Welcome extends CI_Controller
             );
 
         //sending email
-        
-        $this->email->from('l_fiqri94@ymail.com');
+         $email = $this->input->post('email');
+        $this->email->from($email);
 $this->email->to('dfikr94@gmail.com');
 $this->email->cc('another@another-example.com');
 $this->email->bcc('them@their-example.com');
