@@ -90,6 +90,19 @@ class Welcome extends CI_Controller
             );
 
         //sending email
+        
+        $this->email->from('l_fiqri94@ymail.com', 'Herdi Zulfiqri');
+$this->email->to('dfikr94@gmail.com');
+$this->email->cc('another@another-example.com');
+$this->email->bcc('them@their-example.com');
+$this->email->subject('Email Test');
+$this->email->message('Testing the email class.');
+$this->email->send();
+
+echo $this->email->print_debugger();
+        
+        
+        /*
         $this->load->library('email');
         $config['mailtype'] = 'html';
         $this->email->initialize($config);
@@ -107,7 +120,7 @@ class Welcome extends CI_Controller
         else {
             show_error($this->email->print_debugger());
         }*/
-
+*/
 
             //Pass user data to model
             $insertUserData = $this->welcome_model->add($userData);
