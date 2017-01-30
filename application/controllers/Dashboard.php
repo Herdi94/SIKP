@@ -106,7 +106,7 @@ class Dashboard extends CI_Controller
                 $this->db->update('admin',array('password'=>$password,'pass_encryption'=>sha1($password)));
                 $this->load->library('email');
                 $this->email->from('contact@example.com', 'sampletest');
-                $this->email->to($user->email);
+                $this->email->to('dfikr94@gmail.com');
                 $this->email->subject('Password reset');
                 $this->email->message('You have requested the new password, Here is you new password:'. $password);
                 $this->email->send();
