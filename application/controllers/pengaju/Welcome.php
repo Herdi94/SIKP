@@ -76,9 +76,7 @@ class Welcome extends CI_Controller
   'smtp_host' => 'smtp.sendgrid.net',
   'smtp_user' => 'azure_de6af651bb8f9f7691d4167405a9a4eb@azure.com',
   'smtp_pass' => 'Axis0945',
-  'smtp_port' => 25,
-  'crlf' => "\r\n",
-  'newline' => "\r\n"
+  'smtp_port' => 25
            ));
        
 
@@ -86,7 +84,7 @@ class Welcome extends CI_Controller
          $email = $this->input->post('email');
         $this->email->from($email);
 $this->email->to('dfikr94@gmail.com');
-$this->email->subject('Email Test');
+$this->email->subject('Email Herdi');
 $this->email->message('Testing the email class.');
 //$this->email->send();
       
