@@ -26,8 +26,16 @@ class Welcome extends CI_Controller
 
        function __construct()
     {
-//        $this->load->library('email');
-
+        $this->load->library('email');
+   $this->email->initialize(array(
+  'protocol' => 'smtp',
+  'smtp_host' => 'smtp.sendgrid.net',
+  'smtp_user' => 'azure_de6af651bb8f9f7691d4167405a9a4eb@azure.com',
+  'smtp_pass' => 'Axis0945',
+  'smtp_port' => 587,
+  'crlf' => "\r\n",
+  'newline' => "\r\n"
+           ));
 /*
         $config['protocol'] = 'sendmail';
         $config['mailpath'] = '/usr/sbin/sendmail';
