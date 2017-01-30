@@ -79,7 +79,7 @@ $db['default'] = array(
 	'username' => 'bdd577f2e512fd',
 	'password' => 'a5796ca0',
 	'database' => 'sikp',
-	'dbdriver' => 'mysql',
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
