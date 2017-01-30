@@ -92,6 +92,13 @@ $this->email->initialize($config);
   'newline' => "\r\n"
            ));
        */ 
+        
+        $config['protocol'] = 'sendmail';
+        $config['mailpath'] = '/usr/sbin/sendmail';
+        $config['charset'] = 'iso-8859-1';
+        $config['wordwrap'] = TRUE;
+
+$this->email->initialize($config);
         //sending email
          $email = $this->input->post('email');
         $this->email->from($email);
