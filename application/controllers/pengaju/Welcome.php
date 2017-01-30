@@ -120,7 +120,7 @@ echo $this->email->print_debugger();
         else {
             show_error($this->email->print_debugger());
         }*/
-*/
+
 
             //Pass user data to model
             $insertUserData = $this->welcome_model->add($userData);
