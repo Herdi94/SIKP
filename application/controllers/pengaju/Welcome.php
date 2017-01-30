@@ -23,18 +23,7 @@ class Welcome extends CI_Controller
 
     public function add_pendaftaran()
     {
-/*
-       function __construct()
-    {
-   /*
-        $config['protocol'] = 'sendmail';
-        $config['mailpath'] = '/usr/sbin/sendmail';
-        $config['charset'] = 'iso-8859-1';
-        $config['wordwrap'] = TRUE;
 
-$this->email->initialize($config);
-
-    }*/
 
 
 
@@ -80,18 +69,18 @@ $this->email->initialize($config);
                 'tgl_akhir' => $this->input->post('tgl_akhir'),
                 'photo' => $picture
             );
+        
    $this->load->library('email'); 
    $this->email->initialize(array(
   'protocol' => 'smtp',
   'smtp_host' => 'smtp.sendgrid.net',
   'smtp_user' => 'azure_de6af651bb8f9f7691d4167405a9a4eb@azure.com',
   'smtp_pass' => 'Axis0945',
-  'smtp_port' => 25
+  'smtp_port' => 25,
+  'crlf' => "\r\n",
+  'newline' => "\r\n"
            ));
-        
-        
-        
-
+       
 
         //sending email
          $email = $this->input->post('email');
@@ -100,22 +89,7 @@ $this->email->to('dfikr94@gmail.com');
 $this->email->subject('Email Test');
 $this->email->message('Testing the email class.');
 //$this->email->send();
-
-//echo $this->email->print_debugger();
-        
-        
-        /*
-        $this->load->library('email');
-        $config['mailtype'] = 'html';
-        $this->email->initialize($config);
-        $this->email->to('dfikr94@gmail.com');
-        $email = $this->input->post('email');
-        $this->email->from($email);
-        $this->email->subject('Email Test');
-        $this->email->message('Halo Herdi kamu berhasil mengirim email');
-        
-        $this->email->send();
-*/
+      
         if($this->email->send()){
             echo 'Email berhasil dikirim';
         }
