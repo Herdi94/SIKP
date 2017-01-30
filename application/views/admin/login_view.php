@@ -70,7 +70,7 @@
                 <div class="row m-t-15 m-b--20">
 
                     <div class="col-xs-6 align-left">
-                        <a href="<?php echo site_url('dashboard/doforget'); ?>">Forgot Password?</a>
+                        <a href="<?php echo site_url('dashboard/display_doforget'); ?>">Forgot Password?</a>
                     </div>
                 </div>
             </form>
