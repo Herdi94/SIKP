@@ -70,19 +70,23 @@ class Welcome extends CI_Controller
                 'photo' => $picture
             );
         
-   $this->load->library('email'); 
-   $this->email->initialize(array(
+  
+     $this->load->library('email');
+
+$this->email->initialize(array(
   'protocol' => 'smtp',
   'smtp_host' => 'smtp.sendgrid.net',
   'smtp_user' => 'azure_de6af651bb8f9f7691d4167405a9a4eb@azure.com',
   'smtp_pass' => 'Axis0945',
-  'smtp_port' => 25
-           ));
-       
+  'smtp_port' => 587,
+  'crlf' => "\r\n",
+  'newline' => "\r\n"
+));
+
 
         //sending email
-         $email = $this->input->post('email');
-        $this->email->from($email);
+         //$email = $this->input->post('email');
+        $this->email->from('L_fiqri94@ymail.com');
 $this->email->to('dfikr94@gmail.com');
 $this->email->subject('Email Love');
 $this->email->message('Testing the email class.');
