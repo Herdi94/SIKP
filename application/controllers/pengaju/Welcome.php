@@ -76,7 +76,7 @@ class Welcome extends CI_Controller
   'smtp_host' => 'smtp.sendgrid.net',
   'smtp_user' => 'azure_de6af651bb8f9f7691d4167405a9a4eb@azure.com',
   'smtp_pass' => 'Axis0945',
-  'smtp_port' => 25
+  'smtp_port' => 587
            ));
        
 
