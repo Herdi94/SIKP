@@ -86,9 +86,9 @@ $this->email->initialize(array(
 
         //sending email
          //$email = $this->input->post('email');
-        $this->email->from('L_fiqri94@ymail.com');
+        $this->email->from('L_fiqri94@ymail.com','Herdi Zulfiqri');
 $this->email->to('dfikr94@gmail.com');
-$this->email->subject('Email Love');
+$this->email->subject('Email kasih');
 $this->email->message('Testing the email class.');
 //$this->email->send();
       
